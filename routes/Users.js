@@ -34,13 +34,13 @@ router.put("/authOTP/:username", async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'riderharsh720@gmail.com',
-            pass: 'Momisgreat_123'
+            user: '', // Your Email
+            pass: ''  // Your Password
         }
     }, []);
 
     const mailOptions = {
-        from: 'riderharsh720@gmail.com',
+        from: '',  // Your Email
         to: userEmail,
         subject: 'OTP',
         text: 'Your OTP is ' + randomNo
